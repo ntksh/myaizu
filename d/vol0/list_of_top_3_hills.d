@@ -4,23 +4,23 @@ import std.algorithm;
 import std.string;
 
 int main(string[] args) {
-	uint i;
-	uint[] hills;
-	hills.length = 10;
+    uint i;
+    uint[] hills;
+    hills.length = 10;
 
-	uint t;
-	string buf;
-	uint count = 0;
+    uint t;
+    string buf;
+    uint count = 0;
     while ((buf = readln()) != null) {
-    	hills[count] = to!(uint)(strip(buf));
-    	count++;
+        hills[count] = to!(uint)(strip(buf));
+        count++;
     }
 
-	sort!("a > b")(hills);
+    sort!("a > b")(hills);
 
-	for (i = 0; i < 3; i++) {
-		writeln(hills[i]);
-	}
+    for (i = 0; i < 3; i++) {
+        writeln(hills[i]);
+    }
 
-	return 0;
+    return 0;
 }
